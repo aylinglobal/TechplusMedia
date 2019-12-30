@@ -1,0 +1,24 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400i|Heebo:300,400,500,700');
+
+// fonts
+$base-font-size: 16;
+$base-font: 'Heebo', sans-serif;
+$italic-font: 'Crimson Text', serif;
+
+
+
+// color
+$dark-gray: #333;
+$white: #fff;
+$black: #000;
+$green: #94db40;
+$mid-gray: #797979;
+
+$theme-primary-color: $green;
+$body-bg-color: $white;
+$section-bg-color: #f2f2f2;
+$text-color: $mid-gray;
+$heading-color: $dark-gray;

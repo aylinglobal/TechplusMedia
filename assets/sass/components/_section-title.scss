@@ -1,0 +1,113 @@
+/*------------------------------------
+	section title
+-------------------------------------*/
+.section-title {
+	margin-bottom: 35px;
+	
+	@include media-query(767px) {
+		margin-bottom: 25px;
+	}
+
+	> span {
+		font-family: $italic-font;
+		font-size: 25px;
+		font-size: calc-rem-value(25);
+		color: $theme-primary-color;
+
+		@include media-query(991px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+	}
+
+	h2 {
+		font-size: 36px;
+		font-size: calc-rem-value(36);
+		margin: 0;
+
+		@include media-query(991px) {
+			font-size: 32px;
+			font-size: calc-rem-value(32);
+		}
+
+		@include media-query(767px) {
+			font-size: 28px;
+			font-size: calc-rem-value(28);
+		}
+	}
+}
+
+
+.section-title-s2 {
+	text-align: center;
+	margin-bottom: 35px;
+	
+	@include media-query(767px) {
+		margin-bottom: 25px;
+	}
+
+	> span {
+		font-family: $italic-font;
+		font-size: 25px;
+		font-size: calc-rem-value(25);
+		color: $theme-primary-color;
+		display: inline-block;
+		margin-top: -0.28em;
+		text-transform: capitalize;
+
+		@include media-query(991px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+	}
+
+	h2 {
+		font-size: 42px;
+		font-size: calc-rem-value(42);
+		font-weight: bold;
+		margin: 0 0 0.29em;
+		text-transform: capitalize;
+
+		@include media-query(991px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+
+		@include media-query(767px) {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+		}
+	}
+
+	p {
+		font-size: 16px;
+		font-size: calc-rem-value(16);
+		font-weight: 300;
+		margin: 0;
+
+		@include media-query(991px) {
+			font-size: 15px;
+			font-size: calc-rem-value(15);
+		}
+	}
+}
+
+
+.section-title-s3 {
+	@extend .section-title-s2;
+
+	margin-bottom: 48px;
+	
+	@include media-query(767px) {
+		margin-bottom: 40px;
+	}
+
+	h2 {
+		margin: -0.1em 0 0.2em;
+	}
+}
+
+.section-title-s4 {
+	@extend .section-title-s2;
+	text-align: left;
+}

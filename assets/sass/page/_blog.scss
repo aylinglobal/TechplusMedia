@@ -1,0 +1,239 @@
+/*--------------------------------------------------------------
+	#blog page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#3.1	blog-pg-section
+--------------------------------------------------------------*/
+.blog-pg-section {
+	.blog-content {
+		.post {
+			margin-bottom: 100px;
+
+			@include media-query(991px) {
+				margin-bottom: 80px;
+			}
+
+			@include media-query(767px) {
+				margin-bottom: 70px;
+			}
+		}
+	}
+
+	.entry-meta {
+		list-style: none;
+		overflow: hidden;
+		margin: 35px 0;
+
+		@include media-query(767px) {
+			margin: 25px 0;
+		}
+
+		li {
+			float: left;
+			font-size: 14px;
+			font-size: calc-rem-value(14);
+
+			@include media-query(767px) {
+				font-size: 13px;
+				font-size: calc-rem-value(13);
+			}
+
+			@include media-query(767px) {
+				float: none;
+			}
+
+			i {
+				display: inline-block;
+				padding-right: 7px;
+			}
+		}
+
+		> li + li {
+			margin-left: 20px;
+			padding-left: 20px;
+			position: relative;
+
+			@include media-query(767px) {
+				margin-left: 13px;
+				padding-left: 13px;
+			}
+
+			@include media-query(767px) {
+				margin: 3px 0 0;
+				padding: 3px 0 0;
+			}
+		}
+
+		li a {
+			color: #797979;
+
+			&:hover {
+				color: $theme-primary-color;
+			}
+		}
+
+		> li:last-child i {
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	.post {
+		h3 {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+			line-height: 1.2em;
+			font-weight: 500;
+			margin: -0.27em 0 0.7em;
+
+			@include media-query(991px) {
+				font-size: 25px;
+				font-size: calc-rem-value(25);
+			}
+
+			@include media-query(767px) {
+				font-size: 22px;
+				font-size: calc-rem-value(22);
+			}
+		}
+
+		h3 a {
+			color: $heading-color;
+		}
+
+		h3 a:hover {
+			color: $theme-primary-color;
+		}
+
+		p {
+			margin-bottom: 1.5em;
+
+			@include media-query(991px) {
+				font-size: 15px;
+				font-size: calc-rem-value(15);
+			}
+		}
+	}
+
+	/*** format-standard ***/
+	.format-standard,
+	.format-quote {
+		background-color: #fbfbfb;
+		padding: 50px 35px;
+		border: 1px solid #efefef;
+
+		@include media-query(767px) {
+			padding: 40px 20px;
+		}
+
+		.entry-meta {
+			margin-top: 0;
+		}
+	}
+
+	/*** format-gallery ***/
+	.format-gallery {
+		position: relative;
+
+		.owl-controls {
+			width: 100%;
+			margin: 0;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include translatingY();
+		}
+
+		.owl-controls .owl-nav [class*=owl-]:hover {
+			background: $theme-primary-color;
+		}
+
+		.owl-controls .owl-nav [class*=owl-] {
+			background: transparentize(#000, 0.5);
+			width: 50px;
+			height: 50px;
+			line-height: 53px;
+			border-radius: 50%;
+			padding: 0;
+			margin: 0;
+			@include transition-time(0.3s);
+		}
+
+		.owl-controls .owl-nav .owl-prev,
+		.owl-controls .owl-nav .owl-next {
+			position: absolute;
+			top: 50%;
+			@include translatingY();
+		}
+
+		.owl-controls .owl-nav .owl-prev {
+			left: 15px;
+		}
+
+		.owl-controls .owl-nav .owl-next {
+			right: 15px;
+		}
+	}
+
+	/*** format-quote ***/
+	.format-quote {
+		position: relative;
+
+		&:before {
+			content: "";
+			@include background-style("../images/blog/quote.png", center center, auto, no-repeat, local);
+			width: 57px;
+			height: 41px;
+			position: absolute;
+			right: 45px;
+			bottom: 35px;
+		}
+	}
+
+	/*** format-video ***/
+	.format-video .video-holder {
+		position: relative;
+		text-align: center;
+
+		&:before {
+			content: "";
+			@include overlay(transparentize($black, 0.5));
+			@include transition-time(0.3s);
+		}
+
+		&:hover:before {
+			@include overlay(transparentize($black, 0.3));
+		}
+
+		a {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			@include center-by-translating();
+		}
+
+		.fi:before {
+			font-size: 80px;
+			font-size: calc-rem-value(80);
+			color: $white;
+
+			@include media-query(767px) {
+				font-size: 60px;
+				font-size: calc-rem-value(60);
+			}
+		}
+	}
+}
+
+.blog-pg-left-sidebar {
+	.blog-sidebar {
+		@include widther(1200px) {
+			padding-right: 45px;
+			padding-left: 0;
+		}
+	}
+}
+
+
+
+
